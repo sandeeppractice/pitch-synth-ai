@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -7,6 +8,7 @@ import DashboardSidebar from "@/components/DashboardSidebar";
 import { toast } from "sonner";
 
 const StartSimulation = () => {
+  const navigate = useNavigate();
   const [selectedStartup, setSelectedStartup] = useState("");
   const [simulationType, setSimulationType] = useState("");
   const [judgePersona, setJudgePersona] = useState("");
@@ -80,8 +82,15 @@ const StartSimulation = () => {
       return;
     }
 
-    toast.success("Starting simulation...");
-    // In real app, would navigate to simulation page
+    navigate("/simulation", {
+      state: {
+        startup: selectedStartup,
+        simulationType,
+        judgePersona,
+        duration,
+        difficulty,
+      },
+    });
   };
 
   return (

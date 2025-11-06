@@ -9,7 +9,9 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import MyStartups from "./pages/MyStartups";
 import StartSimulation from "./pages/StartSimulation";
-import Scores from "./pages/Scores";
+import Simulation from "./pages/Simulation";
+import Results from "./pages/Results";
+import History from "./pages/History";
 import Subscription from "./pages/Subscription";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
@@ -34,7 +36,9 @@ const App = () => (
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/my-startups" element={<ProtectedRoute><MyStartups /></ProtectedRoute>} />
             <Route path="/start-simulation" element={<ProtectedRoute><StartSimulation /></ProtectedRoute>} />
-            <Route path="/scores" element={<ProtectedRoute><Scores /></ProtectedRoute>} />
+            <Route path="/simulation" element={<ProtectedRoute><Simulation /></ProtectedRoute>} />
+            <Route path="/results" element={<ProtectedRoute><Results /></ProtectedRoute>} />
+            <Route path="/history" element={<ProtectedRoute><History /></ProtectedRoute>} />
             <Route path="/subscription" element={<ProtectedRoute><Subscription /></ProtectedRoute>} />
             <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

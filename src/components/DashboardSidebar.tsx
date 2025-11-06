@@ -8,7 +8,7 @@ const menuItems = [
   { icon: Home, label: "Dashboard", path: "/dashboard" },
   { icon: Briefcase, label: "My Startups", path: "/my-startups" },
   { icon: Video, label: "Simulations", path: "/start-simulation" },
-  { icon: TrendingUp, label: "Scores & Feedback", path: "/scores" },
+  { icon: TrendingUp, label: "Session History", path: "/history" },
   { icon: CreditCard, label: "Subscription", path: "/subscription" },
   { icon: User, label: "Profile", path: "/profile" },
 ];
